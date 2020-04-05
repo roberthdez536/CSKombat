@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour
             movement = transform.TransformDirection(movement);
             movement *= SPEED;
 
-            if (Input.GetButtonDown("Jump"))
+            if (Input.GetAxis("Jump") > 0)
             {
                 movement += Vector3.up * JUMP;
             }
